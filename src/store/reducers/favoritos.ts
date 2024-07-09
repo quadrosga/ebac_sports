@@ -9,7 +9,7 @@ const initialState: FavoritosState = {
   itens: []
 }
 
-export const favoritosReducer = (state = initialState, action: any) => {
+export const favoritosReducer = (state = initialState) => {
   return state
 }
 

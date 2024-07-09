@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Provider, useDispatch, useSelector } from 'react-redux'
+import { Provider } from 'react-redux'
 import { GlobalStyle } from './styles'
 
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
 
 import { store } from './store'
+import { favoritar } from './store/reducers/favoritos'
 
 export type Produto = {
   id: number
@@ -20,7 +21,7 @@ function App() {
       <GlobalStyle />
       <div className="container">
         <Header />
-        <Produtos />
+        <Produtos favoritos={[]} favoritar={favoritar} />
       </div>
     </Provider>
   )

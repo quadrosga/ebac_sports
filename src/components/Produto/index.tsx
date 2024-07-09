@@ -6,6 +6,7 @@ import { favoritar } from '../../store/reducers/favoritos'
 
 type Props = {
   produto: Produto
+  estaNosFavoritos: boolean
 }
 
 export const paraReal = (valor: number) =>
@@ -13,7 +14,7 @@ export const paraReal = (valor: number) =>
     valor
   )
 
-const ProdutoComponent = ({ produto }: Props) => {
+const ProdutoComponent = ({ produto, estaNosFavoritos }: Props) => {
   const dispatch = useDispatch()
 
   return (
